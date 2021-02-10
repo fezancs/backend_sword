@@ -17,7 +17,7 @@ spec:
         imagePullPolicy: Always
         name: bacnkend-sword
         ports:
-        - containerPort: 4200
+        - containerPort: 3000
           protocol: TCP
 
 ---
@@ -28,8 +28,8 @@ metadata:
 spec:
     type: LoadBalancer
     ports:
-    - port: 4200
-      targetPort: 4200
+    - port: 3000
+      targetPort: 3000
       protocol: TCP
     selector:
         app: bacnkend-sword
