@@ -13,7 +13,7 @@ spec:
         app: bacnkend-sword
     spec:
       containers:
-      - image: gcr.io/fillcraft-swards/backend_sward_img_build
+      - image: gcr.io/fillcraft-swards/backend_sward_img_build:lat
         imagePullPolicy: Always
         name: bacnkend-sword
         ports:
