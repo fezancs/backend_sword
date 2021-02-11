@@ -18,6 +18,7 @@ router.post('/add', function(req, res) {
             model.addcustomerorder(req.body, function(err, result) {
                 if(!err)
                 {
+                    console.log("req.body");
                     var orderid=result.insertId;
                     model.addcustomershippinginfo(req.body,orderid, function(err, result) {
             

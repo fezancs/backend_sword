@@ -2,7 +2,7 @@ var db = require("../db");
 
 let model = {
     filterallproducts: (cb) => {
-        return db.query("SELECT price , thumbnail , thumbnail_label , sale , visibility , rating , sale_percent FROM catalog_product", cb)
+        return db.query("SELECT price , thumbnail , thumbnail_label , sale , visibility , rating , sale_percent , shipping FROM catalog_product", cb)
     },
     getfilterproduct: (filterkeyord,offset, limit,cb) => {
         return db.query("SELECT price , thumbnail , thumbnail_label , sale , visibility , rating , sale_percent FROM catalog_product WHERE sku LIKE ? LIMIT ?, ?",['%'+filterkeyord+'%',+offset, +limit], cb)

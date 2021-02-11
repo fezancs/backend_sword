@@ -49,6 +49,11 @@ var displayinstaRouter = require('./routes/displayinsta');
 var displaybannerproductsRouter = require('./routes/displaybannerproducts');
 var filterallproductsRouter = require('./routes/filterallproducts');
 var sortproductsRouter = require('./routes/sortproducts');
+var admintrendingnewsRouter = require('./routes/admintrendingnews');
+var admintrendingproductsRouter = require('./routes/admintrendingproducts');
+var admininstaRouter = require('./routes/admininsta');
+var adminhomesliderRouter = require('./routes/adminhomeslider');
+var adminbannerproductsRouter = require('./routes/adminbannerproducts');
 var app = express();
 var passport=require('passport');
 const bodyParser = require('body-parser');
@@ -118,6 +123,11 @@ app.use('/displayinsta',displayinstaRouter);
 app.use('/displaybannerproducts',displaybannerproductsRouter);
 app.use('/filterallproducts',filterallproductsRouter);
 app.use('/sortproducts',sortproductsRouter);
+app.use('/admintrendingnews',admintrendingnewsRouter);
+app.use('/admintrendingproducts',admintrendingproductsRouter);
+app.use('/admininsta',admininstaRouter);
+app.use('/adminhomeslider',adminhomesliderRouter);
+app.use('/adminbannerproducts',adminbannerproductsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
